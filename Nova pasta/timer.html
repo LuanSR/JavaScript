@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            var myInterval = setInterval(myTimer, 1000);
+
+            function myTimer() {
+                var date = new Date();
+                document.getElementById("relogio").textContent = data.toLocaleTimeString();
+            }
+
+            function pararRelogio() {
+                clearInterval(myInterval);
+            }
+        </script>
+    </head>
+    <body>
+        <p id="relogio"></p>
+        <button onclick="pararRelogio()">Parar</button>
+    </body>
+</html>

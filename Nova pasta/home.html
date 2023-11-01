@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Home</title>
+        <script type="text/javascript">
+            function identificaAluno() {
+                var login = localStorage.getItem("login");
+                if(login != null)
+                document.getElementById("aluno").innerText = login;
+                else
+                window.location.href='login.html';
+            }
+        </script>
+
+    </head>
+    <body onload="identificaAluno();">
+        <h1>LocalStorage</h1>
+        Olá Aluno <span id="aluno"></span>!
+
+    </body>
+</html>

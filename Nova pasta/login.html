@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function verificarLogin(){
+                var obj = localStorage.getItem("login");
+                if (obj !== null) {
+                    window.location.href='home.html';
+                }
+                else{
+                    window.location.href='login.html';
+                }
+            }
+
+        </script>
+    </head>
+    <body onload="verificarLogin();">
+
+    </body>
+</html>

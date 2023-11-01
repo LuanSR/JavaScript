@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function logar(){
+            localStorage.login = document.getElementById("login").value;
+            window.location.href='home.html';
+        }
+        </script>
+    </head>
+    
+    <body>
+        <h1>Login</h1>
+        <form>
+            Nome: <br>
+            <input id="login" type="text">
+            <br><br>
+            Senha:<br>
+            <input id="senha" type="text"> <input type="button" value="OK" onclick="logar();">
+        </form>
+    </body>
+</html>

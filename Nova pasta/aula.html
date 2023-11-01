@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function gravar(){
+            var obj = sessionStorage.getItem("ra").value;
+            //sessionStorage.setItem("ra", ra.value);
+            alert("RA gravado");
+            ra.value = "";
+        }
+    
+        function ler(){
+            var obj = sessionStorage.getItem("ra");
+            if(obj != null)
+            alert(obj)
+            else
+            alert("O RA procurado não existe")
+        }
+
+        function remover(){
+            sessionStorage.removeItem("ra");
+            alert("RA removido");
+        }
+    
+    </script>
+</head>
+
+<body>
+    <h1>
+        SessionStorage
+    </h1>
+    <form>
+        RA:<br>
+        <input type="text" name="ra" id="ra">
+        <button type="button" onclick="gravar();">Gravar</button>
+        <hr>
+        <button type="button" onclick="ler();">Ler RA</button>
+        <button type="button" onclick="remover();">Remover RA</button>
+        <hr>
+    </form>
+</body>
+
+</html>

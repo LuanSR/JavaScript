@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="">
+        <script type="text/javascript">
+
+            var timer = setTimeout(msgEncerramento, 5000);
+
+            function msgEncerramento() {
+                document.querySelector("#myForm").style.display = "none";
+                alert('Seu tempo acabou!!');
+            }
+
+            function verificarResposta(resposta){
+                if (resposta == 3600) {
+                    alert("Parabéns, você acertou!");
+                    clearTimeout(timer);
+                } else {
+                    alert("Errouuuuuu!! Continue tentando antes que o tempo acabe!");
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Desafio</h1>
+        <form id="myForm">
+            <h2>Responda rápido: Uma hora tem quantos segundos?</h2>
+            <input type="radio" name="resposta" id="resposta" value="60" onclick="verificarResposta(this.value)";> 60
+            <input type="radio" name="resposta" id="resposta" value="600" onclick="verificarResposta(this.value)";> 600
+            <input type="radio" name="resposta" id="resposta" value="360" onclick="verificarResposta(this.value)";> 360
+            <input type="radio" name="resposta" id="resposta" value="3600" onclick="verificarResposta(this.value)";> 3600
+
+        </form>
+    </body>
+</html>
